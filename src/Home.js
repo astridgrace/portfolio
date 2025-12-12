@@ -49,28 +49,23 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full lgl:w-[94%] h-full flex flex-col gap-8 lgl:gap-0 lgl:flex-row items-start">
-        {/* ======================== Home Left Start here ============================ */}
-        {showHero && <Left />}
-        {/* ======================== Home Left End here ============================== */}
-        <div
-          className={`w-full ${
-            showHero ? "lgl:w-8/12" : "lgl:flex-1"
-          } min-h-[90vh] cardSurface p-6`}
-        >
+      <div className="w-full lgl:w-[94%] h-full flex flex-col gap-8">
+        <div className="w-full min-h-[90vh] cardSurface p-6">
           <div className="w-full h-full lgl:hidden bg-transparent rounded-2xl flex flex-col gap-10">
             <About />
             <Resume />
             <Projects />
             <Contact />
           </div>
-          <div className="w-full hidden lgl:flex justify-center py-4">
+          <div className="w-full hidden lgl:flex flex-col gap-10 py-4">
             {activeTab === "about" && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 0.35 }}
+                className="flex flex-col gap-8"
               >
+                <Left />
                 <About />
               </motion.div>
             )}
@@ -78,7 +73,7 @@ const Home = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.45 }}
               >
                 <Resume />
               </motion.div>
@@ -87,7 +82,7 @@ const Home = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.45 }}
               >
                 <Projects />
               </motion.div>
@@ -96,7 +91,7 @@ const Home = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.45 }}
               >
                 <Contact />
               </motion.div>
