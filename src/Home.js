@@ -11,6 +11,7 @@ import Contact from "./components/contact/Contact";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("about");
+  const showHero = activeTab === "about";
 
   const tabs = useMemo(
     () => [
@@ -50,9 +51,13 @@ const Home = () => {
 
       <div className="w-full lgl:w-[94%] h-full flex flex-col gap-8 lgl:gap-0 lgl:flex-row items-start">
         {/* ======================== Home Left Start here ============================ */}
-        <Left />
+        {showHero && <Left />}
         {/* ======================== Home Left End here ============================== */}
-        <div className="w-full lgl:w-8/12 min-h-[90vh] cardSurface p-6">
+        <div
+          className={`w-full ${
+            showHero ? "lgl:w-8/12" : "lgl:flex-1"
+          } min-h-[90vh] cardSurface p-6`}
+        >
           <div className="w-full h-full lgl:hidden bg-transparent rounded-2xl flex flex-col gap-10">
             <About />
             <Resume />
