@@ -2,19 +2,19 @@ import React from "react";
 
 const ProjectsCard = ({ image, title, category }) => {
   return (
-    <div className="w-full py-8 flex flex-col justify-center items-center border-b-[1px] border-b-zinc-800">
-      <div className="w-full h-full mb-3 overflow-hidden relative cursor-pointer group">
+    <div className="w-full py-6 flex flex-col justify-center items-center border-b border-b-zinc-800/70">
+      <div className="w-full h-full mb-4 overflow-hidden relative cursor-pointer group rounded-2xl">
         <img
-          className="w-full h-full object-cover scale-100 group-hover:scale-110 duration-300 cursor-pointer"
+          className="w-full h-full object-cover scale-100 group-hover:scale-105 duration-300 cursor-pointer rounded-2xl"
           src={image}
           alt="ImageOne"
         />
-        <div className="w-full h-full absolute top-0 left-0 hover:bg-gradient-to-r from-green-600 via-green-600 to-green-200 opacity-20"></div>
+        <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-black/20 to-black/5 group-hover:bg-designColor/15 transition"></div>
       </div>
-      <h3 className="font-titleFont text-lg font-semibold text-[#ccc]">
+      <h3 className="font-titleFont text-lg font-semibold text-textColor">
         {title}
       </h3>
-      <p className="text-base text-gray-400 -mt-1">{category}</p>
+      <p className="text-sm text-textColor/70 -mt-1">{category}</p>
     </div>
   );
 };

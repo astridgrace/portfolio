@@ -2,10 +2,14 @@ import React from "react";
 
 const ServicesCard = ({ icons, title, subTitle }) => {
   return (
-    <div className="py-8 px-6 flex flex-col items-center gap-2 borderRight borderBottom">
-      <span className="text-4xl text-designColor mb-2">{icons}</span>
-      <h2 className="font-titleFont text-lg font-semibold">{title}</h2>
-      <p className="text-base text-center text-zinc-400 px-6">{subTitle}</p>
+    <div className="py-8 px-6 flex flex-col items-start gap-3 border-r border-b border-zinc-800/60">
+      <span className="text-3xl text-designColor mb-1">{icons}</span>
+      <h2 className="font-titleFont text-lg font-semibold text-textColor">{title}</h2>
+      {subTitle && (
+        <p className="text-sm leading-6 text-textColor/80">
+          {subTitle}
+        </p>
+      )}
     </div>
   );
 };

@@ -109,7 +109,7 @@ const Contact = () => {
       <div className="w-full mt-10">
         <Title title="Send" subTitle="Messages" />
         {successMsg ? (
-          <p className="text-center text-base font-titleFont p-20 text-designColor">
+          <p className="text-center text-base font-titleFont p-10 text-designColor bg-designColor/10 rounded-2xl mx-6">
             {successMsg}
           </p>
         ) : (
@@ -121,46 +121,55 @@ const Contact = () => {
             onSubmit={handleSend} // Trigger the handleSend function on form submission
           >
             <div className="w-full flex flex-col lgl:flex-row gap-4 lgl:gap-10 justify-between">
-              <input
-                onChange={handleName}
-                value={clientName}
-                className={`${
-                  errClientName
-                    ? "border-red-600 focus-visible:border-red-600"
-                    : "border-zinc-600 focus-visible:border-designColor"
-                } w-full bg-transparent border-2 px-4 py-2 text-base text-gray-200 outline-none duration-300`}
-                type="text"
-                name="name"
-                placeholder="Full Name"
-              />
-              <input
-                onChange={handleEmail}
-                value={email}
-                className={`${
-                  errEmail
-                    ? "border-red-600 focus-visible:border-red-600"
-                    : "border-zinc-600 focus-visible:border-designColor"
-                } w-full bg-transparent border-2 px-4 py-2 text-base text-gray-200 outline-none duration-300`}
-                type="email"
-                name="email"
-                placeholder="Email Address"
-              />
+              <div className="flex-1 flex flex-col gap-2">
+                <label className="text-sm text-textColor/70">Nom complet</label>
+                <input
+                  onChange={handleName}
+                  value={clientName}
+                  className={`${
+                    errClientName
+                      ? "border-red-600 focus-visible:border-red-600"
+                      : "border-zinc-700 focus-visible:border-designColor"
+                  } w-full bg-surfaceColor border px-4 py-3 text-base text-gray-200 outline-none duration-300 rounded-xl`}
+                  type="text"
+                  name="name"
+                  placeholder="Votre nom"
+                />
+              </div>
+              <div className="flex-1 flex flex-col gap-2">
+                <label className="text-sm text-textColor/70">Email</label>
+                <input
+                  onChange={handleEmail}
+                  value={email}
+                  className={`${
+                    errEmail
+                      ? "border-red-600 focus-visible:border-red-600"
+                      : "border-zinc-700 focus-visible:border-designColor"
+                  } w-full bg-surfaceColor border px-4 py-3 text-base text-gray-200 outline-none duration-300 rounded-xl`}
+                  type="email"
+                  name="email"
+                  placeholder="nom@email.com"
+                />
+              </div>
             </div>
-            <textarea
-              onChange={handleMessages}
-              value={messages}
-              className={`${
-                errMessages
-                  ? "border-red-600 focus-visible:border-red-600"
-                  : "border-zinc-600 focus-visible:border-designColor"
-              } w-full bg-transparent border-2 px-4 py-2 text-base text-gray-200 outline-none duration-300 resize-none`}
-              placeholder="Your Message"
-              name="message"
-              rows="4"
-            ></textarea>
+            <div className="flex flex-col gap-2">
+              <label className="text-sm text-textColor/70">Message</label>
+              <textarea
+                onChange={handleMessages}
+                value={messages}
+                className={`${
+                  errMessages
+                    ? "border-red-600 focus-visible:border-red-600"
+                    : "border-zinc-700 focus-visible:border-designColor"
+                } w-full bg-surfaceColor border px-4 py-3 text-base text-gray-200 outline-none duration-300 resize-none rounded-xl`}
+                placeholder="Votre message"
+                name="message"
+                rows="4"
+              ></textarea>
+            </div>
             <button
               type="submit" // Make sure this is a submit button
-              className="text-base w-44 flex items-center gap-1 text-gray-200 hover:text-designColor duration-200"
+              className="text-base w-44 h-12 flex items-center gap-2 justify-center text-slate-950 bg-designColor rounded-xl hover:shadow-greenShadow duration-200 font-semibold"
             >
               Send Message{" "}
               <span className="mt-1 text-designColor">

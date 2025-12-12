@@ -14,15 +14,16 @@ module.exports = {
         xl: "1280px",
       },
       fontFamily: {
-        bodyfont: ["Poppins", "sans-serif"],
-        titleFont: ["Montserrat", "sans-serif"],
+        bodyfont: ["Inter", "sans-serif"],
+        titleFont: ["Manrope", "sans-serif"],
       },
       colors: {
-        bodyColor: "#191919",
-        textColor: "rgba(255, 255, 255, 0.85)",
-        designColor: "#edff20",
+        bodyColor: "#0f1218",
+        textColor: "rgba(230, 233, 238, 0.9)",
+        designColor: "#2F80ED",
+        surfaceColor: "#111623",
         titleRoundBg:
-          "linear-gradient(135deg,rgba(120,204,109,.15) 0%,rgba(120,204,109,1%) 100%)",
+          "linear-gradient(135deg,rgba(47,128,237,.08) 0%,rgba(47,128,237,.02) 100%)",
       },
       animation: {
         "spin-slow": "spin 15s linear infinite",
@@ -36,8 +37,8 @@ module.exports = {
         },
       },
       boxShadow: {
-        greenShadow: "0px 0px 188px -14px rgba(237,255,32,1)",
-        testShwdow: "11px 0px 13px -15px rgba(0,0,0,1)",
+        greenShadow: "0 28px 110px -60px rgba(47,128,237,0.55)",
+        testShwdow: "0 20px 60px -35px rgba(0,0,0,0.6)",
       },
     },
   },

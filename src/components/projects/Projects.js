@@ -30,6 +30,11 @@ const Projects = () => {
             category="Mobile app"
             image={workImgTwo}
           />
+          <ProjectsCard
+            title="Analytics Dashboard"
+            category="Web app"
+            image={workImgThree}
+          />
         </div>
         <div className="px-6">
           <ProjectsCard
@@ -41,6 +46,11 @@ const Projects = () => {
             title="Fast Drop"
             category="Mobile App(team)"
             image={workImgSix}
+          />
+          <ProjectsCard
+            title="Portfolio V2"
+            category="UI/UX + Frontend"
+            image={workImgFour}
           />
         </div>
       </div>
